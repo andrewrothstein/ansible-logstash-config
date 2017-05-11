@@ -5,6 +5,7 @@ logstash_config_dir: /etc/logstash/conf.d
 
 logstash_config_collectd:
   port : 25826
+  buffer_size: 1452
 
 logstash_config_syslog:
   port : 50514
