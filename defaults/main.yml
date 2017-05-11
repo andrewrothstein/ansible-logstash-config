@@ -1,0 +1,21 @@
+---
+# defaults file for logstash-config
+
+logstash_config_dir: /etc/logstash/conf.d
+
+logstash_config_collectd:
+  port : 25826
+
+logstash_config_syslog:
+  port : 50514
+
+logstash_config_es_output:
+  ty: static
+
+# supports gathering facts from a group of hosts
+#logstash_config_es_output:
+#  ty: group
+#  groupname: elasticsearch
+#  interface: eth0
+  
+  

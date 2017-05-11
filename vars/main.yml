@@ -1,0 +1,4 @@
+---
+# vars file for logstash-config
+
+logstash_config_eshosts: '{% if logstash_config_es_output is defined %}{% if logstash_config_es_output.ty == "static" %}{{ (logstash_config_es_output.host|default("localhost") + ":" + logstash_config_es_output.port|default(9200)) | to_json }}{% elif logstash_config_es_output.ty == "group" %}{% for host in groups[logstash_config_es_output.groupname | default("elasticsearch")] %}{{ (hostvars[host]["ansible_" + logstash_config_es_output.interface|default("eth0")]["ip4"]["address"] + ":" + logstash_config_es_output.port|default(9200)) | to_json }}{% if not loop.last %},{% endif %}{% endfor %}{% endif %}{% endif %}'
