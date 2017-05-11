@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-logstash-config.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-logstash-config)
 andrewrothstein.logstash-config
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-logstash-config.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-logstash-config)
 
 Configures logstash for collecting logs from syslog and collectd and indexing with elasticsearch
 
